@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0c0c0f">
+  <meta name="description" content="L-RiXx — Developer, builder, and digital explorer.">
+
+  <title>L-RiXx — Digital Space</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0c0c0f;
+      --surface: #131318;
+      --text: #f0f0f5;
+      --muted: #858590;
+      --accent: #b8ff65;
+      --border: #282830;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, 1000px);
+      margin-inline: auto;
+    }
+
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px #b8ff6570;
+    }
+
+    main {
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font: 0.85rem monospace;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      max-width: 800px;
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 510px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      padding: 12px 18px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      font-size: 0.9rem;
+      transition: 180ms ease;
+    }
+
+    .button.primary {
+      color: var(--bg);
+      background: var(--accent);
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 1rem;
+    }
+
+    .section-title span {
+      color: var(--accent);
+      font: 0.8rem monospace;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      min-height: 165px;
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b8ff6570;
+    }
+
+    .card .number {
+      color: var(--accent);
+      font: 0.8rem monospace;
+    }
+
+    .card h3 {
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .note {
+      margin-top: 70px;
+      padding: 22px;
+      border-left: 2px solid var(--accent);
+      background: linear-gradient(90deg, #b8ff650a, transparent);
+      color: var(--muted);
+      font: 0.9rem monospace;
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+
+    @media (max-width: 650px) {
+      main {
+        padding-top: 75px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 130px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a class="logo" href="#" aria-label="L-RiXx home">
+        L<span>-</span>RiXx
+      </a>
+
+      <div class="status">
+        <span class="dot"></span>
+        Digital space
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">// independent mind, digital world</p>
+
+        <h1>
+          Building things.<br>
+          <span>Exploring ideas.</span>
+        </h1>
+
+        <p class="intro">
+          A personal space for experiments, projects, and ideas.
+          Always learning, always building.
+        </p>
+
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://github.com/L-RiXx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore GitHub ↗
+          </a>
+
+          <a class="button" href="#spaces">
+            Explore this space ↓
+          </a>
+        </div>
+      </section>
+
+      <section id="spaces" style="margin-top: 100px;">
+        <h2 class="section-title">
+          <span>01 /</span> Digital spaces
+        </h2>
+
+        <div class="grid">
+          <a class="card" href="https://github.com/L-RiXx">
+            <span class="number">[ 01 ]</span>
+            <h3>Portfolio ↗</h3>
+            <p>Selected work and things I've built.</p>
+          </a>
+
+          <a class="card" href="https://github.com/L-RiXx">
+            <span class="number">[ 02 ]</span>
+            <h3>About ↗</h3>
+            <p>The person behind the projects.</p>
+          </a>
+
+          <a class="card" href="https://github.com/L-RiXx">
+            <span class="number">[ 03 ]</span>
+            <h3>Projects ↗</h3>
+            <p>Experiments, tools, and ideas.</p>
+          </a>
+        </div>
+      </section>
+
+      <div class="note">
+        <strong>&gt; Current mode:</strong>
+        <span id="mode">building something new_</span>
+      </div>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> L-RiXx</p>
+      <p>Designed with intention. <span>Built with curiosity.</span></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
